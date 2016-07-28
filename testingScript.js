@@ -14,4 +14,20 @@ $(function () {
       alert('Click on ' + e.data.elementCount);
     }
   });
+
+  var starRaiting2 = $('.raiting2').raitingBlock({
+    countOfElements: 5,
+    sizeOfElements: 50,
+    countOfNotActiveElement: 1,
+    activeColor: 'red',
+    notActiveColor: 'gray',
+    onHoverColor: 'yellow',
+    basicColor: 'blue',
+    typeOfElement: 'circle',
+    readonly: false,
+
+    callbackClick: function (e) {
+      alert('Click on ' + e.data.elementCount);
+    }
+  });
 });

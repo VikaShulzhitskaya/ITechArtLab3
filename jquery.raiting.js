@@ -11,8 +11,9 @@
     var BLOCK_DIV_CLASS_NAME = 'block';
     var STAR_ELEMENT_CLASS_NAME = 'starElement';
     var CIRCLE_ELEMENT_CLASS_NAME = 'circleElement';
-
-    if ($(this).hasClass('stars')) {
+    $(this).addClass(options.typeOfElement);
+    
+    if (options.typeOfElement == 'stars') {
 
       var widthBlock = Math.round(heightBlock * 0.88);
       var borderLR1 = Math.round(widthBlock * 0.53);
@@ -67,9 +68,9 @@
         'border-bottom-color': options.notActiveColor
       });
 
-    } else if ($(this).hasClass('circle')) {
+    } else if (options.typeOfElement == 'circle') {
 
-      for (var i = 0; i < options.countOfElements; i += 1) {
+      for (var i = 1; i <= options.countOfElements; i += 1) {
         $divElement = $('<div></div>');
         $divElement.addClass(BLOCK_DIV_CLASS_NAME);
         var circleDivElement = $('<div></div>').addClass(CIRCLE_ELEMENT_CLASS_NAME);
@@ -97,14 +98,14 @@
       var CIRCLE_BLOCK_CLASSES = '.circle .block';
       $(CIRCLE_BLOCK_CLASSES).css('height', heightBlock + 'px');
       $(CIRCLE_BLOCK_CLASSES).css('width', heightBlock + 'px');
-      $(CIRCLE_ELEMENT_CLASS_NAME).css({
+      $('.circleElement').css({
         'width': heightBlock + 'px',
         'height': heightBlock + 'px',
         'background': options.basicColor,
         'border-radius': Math.round(heightBlock / 2)
       });
-      $('.notActive').css({
-        'border-bottom-color': options.notActiveColor
+      $('.circleElement.notActive').css({
+        'background': options.notActiveColor
       });
 
     }
