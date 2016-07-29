@@ -42,7 +42,7 @@
         var borderB2 = Math.round(heightBlock * 0.37);
 
         for (var i = 1; i <= options.countOfElements; i++) {
-          var $divElement = $('<div></div>');
+          $divElement = $('<div></div>');
           $divElement.addClass(BLOCK_DIV_CLASS_NAME);
           for (var j = 1; j <= 3; j++) {
             var $starDivElement = $('<div></div>').addClass(STAR_ELEMENT_CLASS_NAME + j);
@@ -166,6 +166,6 @@
         return (sumOfClickedItems / countOfClickedItem).toFixed(2);
       }
     };
-  }
+  };
 
 })(jQuery);
