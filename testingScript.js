@@ -1,21 +1,5 @@
 $(function () {
-  var starRaiting = $('.raiting').raitingBlock({
-    countOfElements: 5,
-    sizeOfElements: 50,
-    countOfNotActiveElement: 1,
-    activeColor: 'red',
-    notActiveColor: 'gray',
-    onHoverColor: 'yellow',
-    basicColor: 'blue',
-    typeOfElement: 'stars',
-    readonly: false,
-
-    callbackClick: function (e) {
-      alert('Click on ' + e.data.elementCount);
-    }
-  });
-
-  var starRaiting2 = $('.raiting2').raitingBlock({
+  var starRaiting = $('.raiting').raitingPlugin({
     countOfElements: 5,
     sizeOfElements: 50,
     countOfNotActiveElement: 1,
@@ -26,8 +10,9 @@ $(function () {
     typeOfElement: 'circle',
     readonly: false,
 
-    callbackClick: function (e) {
-      alert('Click on ' + e.data.elementCount);
-    }
   });
-});
+
+  $('#average').click(function () {
+    alert(starRaiting.averageRaiting());
+
+  });
