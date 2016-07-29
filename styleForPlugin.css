@@ -1,0 +1,47 @@
+.block {
+    height: 215px;
+
+    position: relative;
+    display: inline-block;
+}
+.starElement1 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: inline-block;
+    top: 37%;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #fc2e5a;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+}
+
+.starElement2 {
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: inline-block;
+    top: 4%;
+    left: 32%;
+    border-bottom: 80px solid #fc2e5a;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+
+.starElement3 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: inline-block;
+    top: 37%;
+    left: -10%;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #fc2e5a;
+    border-left: 100px solid transparent;
+    transform: rotate(-35deg);
+}
+
+.circleElement {
+    position: relative;
+    display: inline-block;
+}
